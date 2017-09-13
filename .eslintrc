@@ -1,0 +1,31 @@
+{
+  "env": {
+    "node": true,
+    "es6": true,
+    "browser": true
+  },
+  "rules": {
+    "quotes": ["error", "single"],
+    "strict": 0,
+    "no-extra-semi": 2,
+    "semi": [2, "never"],
+    "indent": [2, 4],
+    "linebreak-style": ["error", "windows"],
+    "object-curly-spacing": [2, "never"],
+    "no-unused-vars": ["error", {"args": "none"}],
+    "no-undef": 0,
+    "comma-dangle": ["error", "never"],
+    "arrow-parens": ["error", "always"],
+    "array-bracket-spacing": ["error", "never"],
+    "dot-notation": ["error", {"allowKeywords": false}],
+    "quote-props": ["error", "consistent"],
+    "no-trailing-spaces": ["error", {"skipBlankLines": true}]
+  },
+  "parserOptions": {
+    "ecmaVersion": 8,
+    "sourceType": "module",
+    "ecmaFeatures": {
+      "jsx": true
+    }
+  }
+}
