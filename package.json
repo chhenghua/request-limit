@@ -13,8 +13,10 @@
   "author": "chheng",
   "license": "ISC",
   "devDependencies": {
+    "bluebird": "^3.5.0",
     "koa": "^2.3.0",
     "mocha": "^3.5.3",
+    "redis": "^2.8.0",
     "supertest": "^3.0.0"
   }
 }
