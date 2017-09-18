@@ -24,6 +24,7 @@ const method = async () => {
     return rlt
 }
 
-;(async () => {
-    await method()
+return (async () => {
+    const rlt = await method()
+    console.log(rlt)
 })()
