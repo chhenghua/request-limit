@@ -20,33 +20,10 @@ limit.init(urlMap, {
 
 const method = async () => {
     const rlt = await limit.checkLimit('token111', '/api/user/getList')
-    console.log('rlt@@@@@@@@@@'.repeat(10))
-    console.log(rlt)
     await limit.record('token111', '/api/user/getList')
     return rlt
 }
 
-const testMethod = () => {
-    return (async () => {
-        await method()
-    })
-}
-
-// testMethod()
-// testMethod()
-// testMethod()
-// testMethod()
-// testMethod()
-
 ;(async () => {
     await method()
 })()
-// ;(async () => {
-//     await method()
-// })()
-// ;(async () => {
-//     await method()
-// })()
-// ;(async () => {
-//     await method()
-// })()

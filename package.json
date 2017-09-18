@@ -20,5 +20,9 @@
   },
   "dependencies": {
     "redis": "^2.8.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/chhenghua/request-limit.git"
   }
 }
