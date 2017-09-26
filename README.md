@@ -15,11 +15,16 @@ urlMap.set('/api/user/getList.get', {limit: 2, interval: 20})
 urlMap.set('/api/user/add.post', {limit: 2, interval: 2})
 urlMap.set('/api/user/getOne.get', {limit: 2, interval: 2})
 
+// 白名单
+const whiteList = []
+whiteList.push('/api/login.post')
+
 limit.init(urlMap, {
     store: {
         host: '127.0.0.1',
         port: 6379
-    }
+    },
+    whiteList
 })
 ```
 #### 其中，后面的参数为多少秒内访问多少次
