@@ -1,15 +1,12 @@
 
 'use strict'
 
-const redis = require('redis')
-const client = redis.createClient(6379, '127.0.0.1')
-
 const limit = require('../index')
 
 const urlMap = new Map()
-urlMap.set('/api/user/getList', {limit: 2, interval: 20})
-urlMap.set('/api/user/add', {limit: 2, interval: 2})
-urlMap.set('/api/user/getOne', {limit: 2, interval: 2})
+urlMap.set('/api/user/getList.get', {limit: 2, interval: 20})
+urlMap.set('/api/user/add.post', {limit: 2, interval: 2})
+urlMap.set('/api/user/getOne.get', {limit: 2, interval: 2})
 
 limit.init(urlMap, {
     store: {
@@ -18,9 +15,11 @@ limit.init(urlMap, {
     }
 })
 
-const method = async () => {
-    const rlt = await limit.checkLimit('token111', '/api/user/getList')
-    await limit.record('token111', '/api/user/getList')
+const method = async (req) => {
+    const token = req.header.Authrozation
+    const url = `${req.url}.${req.method.toLowerCase()}`
+    const rlt = await limit.checkLimit(token, url)
+    await limit.record(token, url)
     return rlt
 }
 
