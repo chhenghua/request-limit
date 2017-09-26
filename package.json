@@ -7,8 +7,10 @@
     "test": "mocha"
   },
   "keywords": [
+    "request-limit",
     "request",
-    "limit"
+    "limit",
+    "rate"
   ],
   "author": "chheng",
   "license": "ISC",
