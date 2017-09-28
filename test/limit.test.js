@@ -21,10 +21,10 @@ limit.init(urlMap, {
 })
 
 const method = async (req) => {
-    const token = req.header.Authrozation
-    const url = `${req.url}.${req.method.toLowerCase()}`
-    const rlt = await limit.checkLimit(token, url)
-    await limit.record(token, url)
+    // const token = req.header.Authrozation
+    // const url = `${req.url}.${req.method.toLowerCase()}`
+    const rlt = await limit.checkLimit('token111', '/api/login.get')
+    await limit.record('token111', '/api/login.get')
     return rlt
 }
 
