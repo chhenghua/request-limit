@@ -2,3 +2,4 @@ node_modules
 .idea
 package-lock.json
 request-limit.iml
+.DS_Store
