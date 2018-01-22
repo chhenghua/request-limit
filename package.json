@@ -16,6 +16,7 @@
   "license": "ISC",
   "devDependencies": {
     "bluebird": "^3.5.0",
+    "eslint": "^4.16.0",
     "koa": "^2.3.0",
     "mocha": "^3.5.3",
     "supertest": "^3.0.0"
